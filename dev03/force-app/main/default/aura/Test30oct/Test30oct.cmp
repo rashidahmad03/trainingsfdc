@@ -1,0 +1,29 @@
+<aura:component controller="AccountController" >
+    x
+    {x}
+    <aura:attribute name="name" type='String' default='Ty' ></aura:attribute>
+      <aura:attribute name="header" type='String' ></aura:attribute>
+    <aura:attribute name="account" type='Account' ></aura:attribute>
+<aura:attribute name="acclist" type='List' ></aura:attribute>
+    <aura:attribute name="columns" type='List' ></aura:attribute>
+    {!v.account.Name}
+     {!v.account.Type}
+    
+     <a href="javascript:void(0);" onclick="{!c.func1}" id='sf' aura:id="hellp" value="add" >Click</a>
+    <lightning:input type="text" aura:id="Name" placeholder="" value="{!v.account.Name}" disabled="true" class="slds-input" />
+    <aura:if isTrue="{!v.acclist}" >
+   <lightning:datatable
+                keyField="id"
+                data="{! v.acclist }"
+                columns="{! v.columns }"
+                hideCheckboxColumn="true"/>
+        </aura:if>
+    
+	<div class="slds-align_absolute-center" style="height:5rem">{!v.header}</div>
+    <force:recordData recordId="0012w00000YhjMxAAJ" targetFields="{!v.account}" layoutType="FULL">
+    </force:recordData>
+<button class="slds-button slds-button_brand" onclick="{!c.myAction}">Brand Button</button>
+        <!-- Success variant: Identifies a successful action -->
+    <lightning:button variant="success" label="Success" title="Success"  aura:id="gf" onclick="{! c.func1 }"/>
+
+</aura:component>
