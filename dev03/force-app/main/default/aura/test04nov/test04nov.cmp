@@ -1,0 +1,7 @@
+<aura:component >
+	 <aura:attribute name="name" type='String' default='Ty' ></aura:attribute>
+    {!v.name}
+     <aura:registerEvent name="cmpEvent" type="c:test04novevent"/>
+      <lightning:button variant="success" label="Success" title="Success"  aura:id="gf" onclick="{! c.func1 }"/>
+    <lightning:input type="text" placeholder="please enter a value" value="{!v.name}" class="slds-input" />
+</aura:component>
