@@ -16,3 +16,18 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+
+
+
+important:
+We have two types of expression Bound expression and Unbound expression which we use to perform data binding in lightning components.
+
+Let see two example:
+
+<c:ChildComp childAttributeName="{!v.parentAttributeName}" />   <!--Bound Expression-->
+
+childAttributeName="{!v.parentAttributeName}" is a bound expression. Any change to the value of the childAttributeName attribute in child component also changes the value of parentAttributeName attribute in parent component and vice versa.
+
+<c:ChildComp childAttributeName="{#v.parentAttributeName}" />    <!--Unbound Expression-->
+
+childAttributeName="{#v.parentAttributeName}" is a Unbound expression. Any change to the value of the childAttributeName attribute in child component has no effect on the value of parentAttributeName attribute in parent component and vice versa.

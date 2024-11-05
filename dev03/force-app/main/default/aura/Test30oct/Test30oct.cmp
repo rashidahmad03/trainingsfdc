@@ -1,11 +1,14 @@
-<aura:component controller="AccountController" >
+<aura:component controller="AccountController" implements="lightning:actionOverride" >
     x
     {x}
-    <aura:attribute name="name" type='String' default='Ty' ></aura:attribute>
+    <aura:attribute name="name" type='String' default="{!$Label.SBQQ.lbl_actions}" ></aura:attribute>
     <aura:attribute name="header" type='String' ></aura:attribute>
     <aura:attribute name="account" type='Account' ></aura:attribute>
     <aura:attribute name="acclist" type='List' ></aura:attribute>
     <aura:attribute name="columns" type='List' ></aura:attribute>
+     <aura:attribute name="messageFromEvent" type="String"/>
+     <aura:attribute name="numEvents" type="Integer" default="0"/>
+    
      <aura:handler name="cmpEvent" event="c:test04novevent" action="{!c.ev}"/>
    
     {!v.account.Name}
@@ -21,6 +24,11 @@
                              hideCheckboxColumn="true"/>
     </aura:if>
     
+     <aura:handler event="c:aeEvent" action="{!c.handleApplicationEvent}"/>
+
+    <p>{#v.messageFromEvent}</p>
+    <p>Number of events: {!v.numEvents}</p>
+    
     <div class="slds-align_absolute-center" style="height:5rem">{!v.header}</div>
     <force:recordData recordId="0012w00000YhjMxAAJ" targetFields="{!v.account}" layoutType="FULL">
     </force:recordData>
@@ -29,7 +37,9 @@
     <button class="slds-button slds-button_brand" onclick="{!c.myAction}">Brand Button</button>
     <!-- Success variant: Identifies a successful action -->
   
-    
-    <c:test04nov ></c:test04nov>
+    <div class="slds-align_absolute-center" onclick="{!c.func1}">   
+    <button class="slds-align_absolute-center slds-button slds-button_brand" onclick="{!c.myAction}">Brand Button</button> 
+    </div>
+    <c:test04nov name="{#v.name}" ></c:test04nov>
     
 </aura:component>

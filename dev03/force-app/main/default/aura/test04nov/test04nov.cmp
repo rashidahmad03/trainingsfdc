@@ -2,6 +2,13 @@
 	 <aura:attribute name="name" type='String' default='Ty' ></aura:attribute>
     {!v.name}
      <aura:registerEvent name="cmpEvent" type="c:test04novevent"/>
+    <aura:registerEvent name="appEvent" type="c:aeEvent"/>
+
       <lightning:button variant="success" label="Success" title="Success"  aura:id="gf" onclick="{! c.func1 }"/>
     <lightning:input type="text" placeholder="please enter a value" value="{!v.name}" class="slds-input" />
+
+ <p><lightning:button
+        label="Click here to fire an application event"
+        onclick="{!c.fireApplicationEvent}" />
+    </p>
 </aura:component>
