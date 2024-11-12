@@ -1,0 +1,34 @@
+<template>
+    event
+    <div class="slds-var-m-around_small">
+
+        <lightning-input value={message} label="Message" onchange={handleinput} onblur={handleinput}></lightning-input>
+    </div>
+    <lightning-button value="Click Me" variant="brand" label="Click Me" onclick={handleclick}></lightning-button>
+    {finaldata}
+
+    <div class="slds-var-m-around_small">
+        <template if:true={isTom}>
+            <img src="https://static.wikia.nocookie.net/tomandjerry/images/9/9e/Tom_Artwork_in_The_Tom_and_Jerry_Show_%282014%29.png"
+                width="200" height="200" />
+        </template>
+        <template if:false={isTom}>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRffT0BGXAqTQTbYy0DJStgTJOAUrZMP-mo2A&s"
+                width="200" height="200" />
+        </template>
+
+    </div>
+    <template lwc:if={isTom}>
+
+    </template>
+    <template lwc:elseif={isTom}></template>
+    <template lwc:else>
+
+    </template>
+    <div>
+        <lightning-button value="Tom" variant="brand" class="slds-var-m-around_small" label="Tom"
+            onclick={handleTom}></lightning-button>
+        <lightning-button value="Jerry" class="slds-var-m-around_small" variant="brand" label="Jerry"
+            onclick={handleJerry}></lightning-button>
+    </div>
+</template>
