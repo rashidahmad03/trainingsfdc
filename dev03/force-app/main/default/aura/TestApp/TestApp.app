@@ -1,4 +1,6 @@
 <aura:application extends="force:slds" >
-	<c:Overlay></c:Overlay>
-    <c:AccountList></c:AccountList>
+	<!--c:nov11></c:nov11-->
+    <!-- <c:htmlevents></c:htmlevents> -->
+     <!-- <c:iteratorDemo></c:iteratorDemo> -->
+      <c:calculatorCmp></c:calculatorCmp>
 </aura:application>

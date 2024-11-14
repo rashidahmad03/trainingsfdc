@@ -1,0 +1,35 @@
+<template>
+    <div class="slds-var-m-around_small">
+        <lightning-card title="LWC ForEch">
+            <template for:each={contacts} for:item="item" for:index="index">
+                <p key={item.Id} class="slds-var-m-around_small">
+                    index {index} : Id-{item.Id} - {item.Name} &nbsp; {item.email}
+                </p>
+
+            </template>
+        </lightning-card>
+
+
+    </div>
+    <div class="slds-var-m-around_small">
+        <lightning-card title="LWC Iterator">
+
+            <template iterator:it={contacts}>
+                <li key={it.value.Id} 
+                        class="slds-var-m-around_small" 
+                        style="list-style-type: none; " >
+                      
+                        <div if:true={it.first} class="list-first">
+                            Name
+                        </div>
+                            {it.value.Name} &nbsp; {it.value.Email}
+                        <div if:true={it.last} class="list-last">Name</div>
+
+                        </li>
+
+             
+            </template>
+        </lightning-card>
+    </div>
+
+</template>
