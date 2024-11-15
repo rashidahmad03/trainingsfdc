@@ -1,8 +1,8 @@
-import { LightningElement } from 'lwc';
+import { LightningElement ,api} from 'lwc';
 
 export default class CalculatorCmp extends LightningElement {
-    number1
-    number2
+    @api number1
+    @api number2
     result
 
     handleChangeEvent(event) {
