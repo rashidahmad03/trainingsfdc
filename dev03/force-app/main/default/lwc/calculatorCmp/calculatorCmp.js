@@ -4,7 +4,12 @@ export default class CalculatorCmp extends LightningElement {
     @api number1
     @api number2
     result
-
+constructor(){
+    super()
+}
+connectedCallback(){
+    
+}
     handleChangeEvent(event) {
         const val = event.target.value;
         const name = event.target.name;

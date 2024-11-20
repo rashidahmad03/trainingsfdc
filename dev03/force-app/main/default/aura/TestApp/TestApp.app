@@ -3,5 +3,6 @@
     <!-- <c:htmlevents></c:htmlevents> -->
      <!-- <c:iteratorDemo></c:iteratorDemo> -->
       <!-- <c:calculatorCmp></c:calculatorCmp> -->
-      <c:decorators></c:decorators>
+      <!-- <c:decorators></c:decorators> -->
+       <c:lifeparent></c:lifeparent>
 </aura:application>
