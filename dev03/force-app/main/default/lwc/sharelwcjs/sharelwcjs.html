@@ -1,0 +1,17 @@
+<template>
+    
+    share 
+    <lightning-card title="Calculator" icon-name="custom:custom34">
+        <lightning-input value={number1} lable="Number 1" name="number1" placeholder="Enter number 1" onchange={handleChangeEvent}>
+        </lightning-input>
+        <lightning-input value={number2} lable="Number 2" name="number2" placeholder="Enter number 2" onchange={handleChangeEvent}></lightning-input>
+
+        <br>
+        <br>
+        <lightning-button variant="brand" label="Sum" onclick={doSum} >
+        </lightning-button>
+
+        <br>
+        result : {result}
+    </lightning-card>
+</template>

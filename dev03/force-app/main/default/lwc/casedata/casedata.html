@@ -1,0 +1,28 @@
+<template>
+    
+    
+        <lightning-card>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-input-address
+        show-address-lookup
+        address-label="Address"
+        street-label="Street"
+        city-label="City"
+        country-label="Country"
+        province-label="State"
+        postal-code-label="Zip Code"
+        street="1 Market St."
+        city="San Francisco"
+        country="US"
+        province="CA"
+    >
+    </lightning-input-address>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-button label="Search" onclick={handleSearch}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+
+    </lightning-card>
+</template>
