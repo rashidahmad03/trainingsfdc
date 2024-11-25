@@ -1,0 +1,68 @@
+<template>
+    contact : {recordId}
+
+    <lightning-button label="get record"  onclick={handlerecordId}></lightning-button>
+
+    <lightning-card>
+     
+            <!-- <lightning-record-form
+                record-id={recordId}
+                object-api-name="Contact"
+                layout-type="Compact"
+                mode="edit">
+            </lightning-record-form> -->
+
+ 
+            
+  <!-- <lightning-record-view-form
+  record-id={recordId}
+  object-api-name="Contact">
+<div class="slds-grid">
+<div class="slds-col slds-size_1-of-2">
+  <lightning-output-field field-name="Name"></lightning-output-field>
+</div>
+<div class="slds-col slds-size_1-of-2">
+  <lightning-output-field field-name="Phone"></lightning-output-field>
+</div>
+</div>
+</lightning-record-view-form> -->
+
+
+  <lightning-record-edit-form
+  record-id={recordId}
+  object-api-name="Contact">
+<div class="slds-grid">
+<div class="slds-col slds-size_1-of-2">
+  <lightning-input-field field-name="LastName"></lightning-input-field>
+</div>
+<div class="slds-col slds-size_1-of-2">
+  <lightning-input-field field-name="Phone"></lightning-input-field>
+</div>
+
+</div>
+<lightning-button type="submit" label="Submit"></lightning-button>
+</lightning-record-edit-form>
+    </lightning-card>
+
+    
+        <lightning-record-form
+           object-api-name="Account"
+            layout-type="Compact"
+            mode="edit">
+        </lightning-record-form>
+   
+    
+        <lightning-record-edit-form
+        object-api-name="Account">
+ <div class="slds-grid">
+     <div class="slds-col slds-size_1-of-2">
+         <lightning-input-field field-name="Name"></lightning-input-field>
+    </div>
+     <div class="slds-col slds-size_1-of-2">
+         <lightning-input-field field-name="Industry"></lightning-input-field>
+    </div>
+ </div>
+ <lightning-button type="submit" label="Submit"></lightning-button>
+</lightning-record-edit-form>
+
+</template>
